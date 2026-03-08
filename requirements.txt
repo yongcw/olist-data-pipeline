@@ -1,0 +1,43 @@
+# ========================
+# Phase 1: Data Ingestion
+# ========================
+pandas==2.2.1
+google-cloud-bigquery==3.19.0
+google-cloud-bigquery-storage==2.36.2
+db-dtypes==1.2.0  # Required for pandas/BigQuery data type conversions
+
+# ========================
+# Phase 3: Transformation
+# ========================
+# Installing dbt-bigquery automatically installs the compatible dbt-core version
+dbt-bigquery==1.7.6
+
+# ========================
+# Phase 4: Data Quality
+# ========================
+great-expectations==0.18.12
+
+# ========================
+# Phase 5: Pipeline Orchestration
+# ========================
+dagster==1.6.14
+dagster-webserver==1.6.14
+dagster-dbt==0.22.14
+dagster-gcp==0.22.14
+
+# ========================
+# Phase 6: Data Analysis (Jupyter)
+# ========================
+jupyter==1.0.0
+ipykernel==6.29.3
+SQLAlchemy==1.4.52
+sqlalchemy-bigquery==1.9.0
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# ========================
+# Phase 7: Dashboarding (Streamlit)
+# ========================
+streamlit
+plotly
+nbformat

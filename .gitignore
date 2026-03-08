@@ -1,0 +1,61 @@
+# ========================
+# 1. Data & Credentials (CRITICAL)
+# ========================
+# Ignore all local raw CSV files and datasets
+data/
+*.csv
+*.zip
+
+# Ignore GCP Service Account JSON keys
+*.json
+!manifest.json
+!catalog.json
+credentials/
+keys/
+.env
+
+# ========================
+# 2. Python & Environments
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.Python
+
+# ========================
+# 3. dbt (Data Build Tool)
+# ========================
+# Ignore dbt compilation artifacts and logs
+target/
+dbt_packages/
+logs/
+dbt_modules/
+profiles.yml  # Never commit your actual profiles.yml! (Keep profiles.yml.example)
+
+# ========================
+# 4. Dagster
+# ========================
+# Ignore Dagster local storage and run metadata
+*.dagster_storage/
+tmp*/
+# (Removed workspace.yaml from here so it gets uploaded!)
+
+# ========================
+# 5. Great Expectations
+# ========================
+# Ignore uncommitted GE data (local validation results, data docs, etc.)
+great_expectations/uncommitted/
+
+# ========================
+# 6. Jupyter Notebooks
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# 7. OS Generated Files
+# ========================
+.DS_Store
+Thumbs.db
